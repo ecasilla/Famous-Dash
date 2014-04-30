@@ -12,5 +12,6 @@
   <true/>
   <key>dashIndexFilePath</key>
   <string>API-reference.html</string>
+  <key>isJavaScriptEnabled</key><true/>
 </dict>
 </plist>
