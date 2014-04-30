@@ -1,0 +1,171 @@
+ul {
+    list-style-type: disc;
+}
+
+.navigation-margin {
+    top: 112px;
+}
+.navigation-wrap {
+    z-index: 1000;
+    position: absolute;
+}
+
+a .selected {
+    color: #fa5c4f;
+}
+
+/*  navigation styles begin */
+nav {
+    float: left;
+    width: 100%;
+    background-color: #363636;
+}
+nav a {
+    color: white;
+}
+
+nav .left h6,
+nav .right a h6,
+nav .left a h6 {
+  float: left;
+  padding-left: 48px;
+  padding-top: 14px;
+}
+
+nav .left a img {
+  padding-top: 0px;
+  padding-right: 0px;
+  float: left;
+}
+
+nav #nav-menu-button img {
+    padding-top: 7px;
+}
+
+#doc-nav-scroll a {
+    color: white;
+}
+
+.pad-nav {
+    padding-top: 112px;
+}
+
+/* nav .right { margin-right: 36px; }*/
+.main { padding: 18px; }
+nav .main { padding: 76px 76px; }
+
+.post {
+    width: 100%;
+    //max-width: 522px;
+}
+
+.miniSpacer { margin-bottom: 9px; }
+
+/** nav mobile menu button */
+nav .menu {
+    padding: 14px;
+    /** margin-top: 7px; **/
+    float: left;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+    float: right;
+}
+nav .menu:hover {
+    background-color: #fa5c4f;
+    color: white;
+    border: 1px soild #ffffff;
+}
+
+nav .menu-text {
+    margin-left: 14px;
+}
+
+
+/** nav mobile menu */
+#mobileNav {
+    position: fixed;
+    opacity: 0;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fa5c4f;
+    overflow-y: scroll;
+    color: #ffffff;
+    z-index: 2;
+}
+
+#mobileNav a h6 {
+    color: #ffffff;
+    display: inline-block;
+}
+
+#mobileNav .container {
+    text-align: center;
+    padding-top: 47px;
+}
+
+@media only screen and (min-width: 850px ) {
+    /*  navigation styles begin */
+    nav {
+        position: fixed;
+    }
+}
+
+/*  nav / main media queries */
+@media only screen and (min-width: 850px ) and (max-width: 1049px) {
+    nav .main { padding: 47px 47px; }
+    nav .right {
+        margin-right: 0px;
+    }
+
+    nav .left a h6,
+    .main {
+        padding-left: 47px;
+    }
+    .post {
+        margin-left: 47px;
+    }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1399px) {
+    nav .main { padding: 47px; }
+
+    nav .left a h6,
+    nav .right a h6 {
+      padding-left: 47px;
+    }
+
+    .main {
+      margin-left: 140px;
+      padding-left: 47px;
+    }
+
+    nav .left a img { padding-right: 27px; }
+
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    nav .left a h6,
+    nav .right a h6 {
+      padding-left: 47px;
+
+    }
+
+    nav .main { padding: 76px; }
+
+    .main {
+      margin-left: 334px;
+      padding-left: 76px;
+    }
+
+}
+
+
+.demo-container {
+    padding: 20px;
+}
