@@ -6,7 +6,6 @@
   Sequelize = require("sequelize");
   files = ["API-reference"];
   notFound = [];
-  regexps = [/\[\[(.*?)\|(.*?)(#(.*))?\]\]/, /\[(.*?)\]\((.*?)(#(.*))?\)/];
   seq = new Sequelize('database', 'username', 'password', {
     dialect: 'sqlite',
     storage: 'Famous.docset/Contents/Resources/docSet.dsidx'
@@ -30,22 +29,6 @@
     timestamps: false
   });
   SearchIndex.sync().success(function(){
-    var key, ref$, items, lresult$, i$, len$, item, si, results$ = [];
-    for (key in ref$ = obj) {
-      items = ref$[key];
-      lresult$ = [];
-      for (i$ = 0, len$ = items.length; i$ < len$; ++i$) {
-        item = items[i$];
-        si = SearchIndex.build({
-          name: item.name,
-          type: key,
-          path: item.path
-        });
-        lresult$.push(si.save());
-      }
-      results$.push(lresult$);
-    }
-    return results$;
   });
   
 }).call(this);
