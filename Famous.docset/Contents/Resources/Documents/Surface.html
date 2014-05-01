@@ -5640,6 +5640,867 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+<div class="col1">
+            <div id="docs-container" class="cf docs col1 white-bg scrollable">
+                <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+                        <div class="col1 spacer">
+
+                            <h2>Surface</h2>
+                            <h6 class="miniSpacer">A base class for viewable content and event targets inside a Famo.us application, containing a renderable document fragment. Like an HTML div, it can accept internal markup, properties, classes, and handle events.</h6>
+
+
+
+
+                                <h6 class="medium-grey">Constructor</h6>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">options (optional)</div>
+            <div class="col-d">Object</div>
+            <div class="col-d">default option overrides</div>
+
+
+
+<ul>
+    <li class="col1 miniSpacer">
+    <div class="col-d demi">size (optional)</div>
+        <div class="col-d">Array.Number</div>
+        <div class="col-d">[width, height] in pixels</div>
+    </li>
+</ul>
+
+<ul>
+    <li class="col1 miniSpacer">
+    <div class="col-d demi">classes (optional)</div>
+        <div class="col-d">Array.string</div>
+        <div class="col-d">CSS classes to set on inner content</div>
+    </li>
+</ul>
+
+<ul>
+    <li class="col1 miniSpacer">
+    <div class="col-d demi">properties (optional)</div>
+        <div class="col-d">Array</div>
+        <div class="col-d">string dictionary of HTML attributes to set on target div</div>
+    </li>
+</ul>
+
+<ul>
+    <li class="col1 miniSpacer">
+    <div class="col-d demi">content (optional)</div>
+        <div class="col-d">String</div>
+        <div class="col-d">inner (HTML) content of surface</div>
+    </li>
+</ul>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+                        </div>
+
+
+
+
+                                <a class="method-tag" name=""></a>
+                                <div id="method-" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin">  </h3>
+                                        <p>  </p>
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 52 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="" on""=""></a>
+                                <div id="method-" on""="" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> "on" (type, fn)</h3>
+                                        <p> Bind a callback function to an event type handled by this object. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">type</div>
+            <div class="col-d">String</div>
+            <div class="col-d">event type key (for example, 'click')</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">fn</div>
+            <div class="col-d">Function(string, Object)</div>
+            <div class="col-d">handler callback</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">EventHandler</div>
+                                                <div class="col-d2"> this</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 68 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="removeListener"></a>
+                                <div id="method-removeListener" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> removeListener (type, fn)</h3>
+                                        <p> Unbind an event by type and handler. This undoes the work of "on" </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">type</div>
+            <div class="col-d">String</div>
+            <div class="col-d">event type key (for example, 'click')</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">fn</div>
+            <div class="col-d">Function(string, Object)</div>
+            <div class="col-d">handler</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 82 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="emit"></a>
+                                <div id="method-emit" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> emit (type, event)</h3>
+                                        <p> Trigger an event, sending to all downstream handlers listening for provided 'type' key. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">type</div>
+            <div class="col-d">String</div>
+            <div class="col-d">event type key (for example, 'click')</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">event</div>
+            <div class="col-d">Object</div>
+            <div class="col-d">event data</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">EventHandler</div>
+                                                <div class="col-d2"> this</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 94 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="pipe"></a>
+                                <div id="method-pipe" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> pipe (target)</h3>
+                                        <p> Add event handler object to set of downstream handlers. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">target</div>
+            <div class="col-d">EventHandler</div>
+            <div class="col-d">event handler target object</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">EventHandler</div>
+                                                <div class="col-d2"> passed event handler</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 111 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="unpipe"></a>
+                                <div id="method-unpipe" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> unpipe (target)</h3>
+                                        <p> Remove handler object from set of downstream handlers. Undoes work of "pipe" </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">target</div>
+            <div class="col-d">EventHandler</div>
+            <div class="col-d">target handler object</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">EventHandler</div>
+                                                <div class="col-d2"> provided target</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 123 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+
+
+                                <a class="method-tag" name="setProperties"></a>
+                                <div id="method-setProperties" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> setProperties (properties)</h3>
+                                        <p> Set CSS-style properties on this Surface. Note that this will cause dirtying and thus re-rendering, even if values do not change. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">properties</div>
+            <div class="col-d">Object</div>
+            <div class="col-d">property dictionary of "key" =&gt; "value"</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 148 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="getProperties"></a>
+                                <div id="method-getProperties" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> getProperties </h3>
+                                        <p> Get CSS-style properties on this Surface. </p>
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Object</div>
+                                                <div class="col-d2"> Dictionary of this Surface's properties.</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 162 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="addClass"></a>
+                                <div id="method-addClass" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> addClass (className)</h3>
+                                        <p> Add CSS-style class to the list of classes on this Surface. Note this will map directly to the HTML property of the actual corresponding rendered </p><div>. <p></p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">className</div>
+            <div class="col-d">String</div>
+            <div class="col-d">name of class to add</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 173 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="removeClass"></a>
+                                <div id="method-removeClass" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> removeClass (className)</h3>
+                                        <p> Remove CSS-style class from the list of classes on this Surface. Note this will map directly to the HTML property of the actual corresponding rendered </p><div>. <p></p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">className</div>
+            <div class="col-d">String</div>
+            <div class="col-d">name of class to remove</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 188 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="setClasses"></a>
+                                <div id="method-setClasses" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> setClasses (classList)</h3>
+                                        <p> Reset class list to provided dictionary. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">classList</div>
+            <div class="col-d">Array.string</div>
+            <div class="col-d"></div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 204 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="getClasslist"></a>
+                                <div id="method-getClasslist" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> getClasslist </h3>
+                                        <p> Get array of CSS-style classes attached to this div. </p>
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Array.string</div>
+                                                <div class="col-d2"> array of class names</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 220 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="setContent"></a>
+                                <div id="method-setContent" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> setContent (content)</h3>
+                                        <p> Set or overwrite inner (HTML) content of this surface. Note that this causes a re-rendering if the content has changed. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">content</div>
+            <div class="col-d">String</div>
+            <div class="col-d">HTML content</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 230 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="getContent"></a>
+                                <div id="method-getContent" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> getContent </h3>
+                                        <p> Return inner (HTML) content of this surface. </p>
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">String</div>
+                                                <div class="col-d2"> inner (HTML) content</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 244 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="setOptions"></a>
+                                <div id="method-setOptions" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> setOptions (options)</h3>
+                                        <p> Set options for this surface </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">options (optional)</div>
+            <div class="col-d">Object</div>
+            <div class="col-d">overrides for default options.  See constructor.</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 255 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <a class="method-tag" name="getSize"></a>
+                                <div id="method-getSize" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> getSize (actual)</h3>
+                                        <p> Get the x and y dimensions of the surface. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">actual</div>
+            <div class="col-d">Boolean</div>
+            <div class="col-d">return computed size rather than provided</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Array.Number</div>
+                                                <div class="col-d2"> [x,y] size of surface</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 552 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="setSize"></a>
+                                <div id="method-setSize" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> setSize (size)</h3>
+                                        <p> Set x and y dimensions of the surface. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">size</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">as [width, height]</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 563 famous/core/Surface.js</small>
+
+                                </div>
+
+
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
         </div>
       </div>
 

@@ -5640,6 +5640,234 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+              <div class="col1 spacer">
+
+                <h2>RenderNode</h2>
+                <h6 class="miniSpacer">A wrapper for inserting a renderable component (like a Modifer or Surface) into the render tree.</h6>
+
+
+
+
+                <h6 class="medium-grey">Constructor</h6>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">object</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">Target renderable component</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+              </div>
+
+
+
+
+              <a class="method-tag" name="add"></a>
+              <div id="method-add" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> add (child)</h3>
+                <p> Append a renderable to the list of this node's children. This produces a new RenderNode in the tree. Note: Does not double-wrap if child is a RenderNode already. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">child</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">renderable object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">RenderNode</div>
+                    <div class="col-d2"> new render node wrapping child</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 38 famous/core/RenderNode.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="get"></a>
+              <div id="method-get" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> get </h3>
+                <p> Return the single wrapped object. Returns null if this node has multiple child nodes. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Ojbect</div>
+                    <div class="col-d2"> contained renderable object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 60 famous/core/RenderNode.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="set"></a>
+              <div id="method-set" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> set (child)</h3>
+                <p> Overwrite the list of children to contain the single provided object </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">child</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">renderable object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">RenderNode</div>
+                    <div class="col-d2"> this render node, or child if it is a RenderNode</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 71 famous/core/RenderNode.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getSize"></a>
+              <div id="method-getSize" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getSize </h3>
+                <p> Get render size of contained object. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Array.Number</div>
+                    <div class="col-d2"> size of this or size of single child.</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 89 famous/core/RenderNode.js</small>
+
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
 

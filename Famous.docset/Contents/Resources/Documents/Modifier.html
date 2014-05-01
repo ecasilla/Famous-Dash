@@ -5640,6 +5640,731 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
+
+              <div class="col1 spacer">
+
+                <h2>Modifier</h2>
+                <h6 class="miniSpacer">A collection of visual changes to be applied to another renderable component. This collection includes a transform matrix, an opacity constant, a size, an origin specifier. Modifier objects can be added to any RenderNode or object capable of displaying renderables. The Modifier's children and descendants are transformed by the amounts specified in the Modifier's properties.</h6>
+
+
+                <h6 class="medium-grey">Constructor</h6>
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">options (optional)</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">overrides of default options</div>
+
+
+
+                    <ul>
+                      <li class="col1 miniSpacer">
+                        <div class="col-d demi">transform (optional)</div>
+                        <div class="col-d">Transform</div>
+                        <div class="col-d">affine transformation matrix</div>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li class="col1 miniSpacer">
+                        <div class="col-d demi">opacity (optional)</div>
+                        <div class="col-d">Number</div>
+                        <div class="col-d"></div>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li class="col1 miniSpacer">
+                        <div class="col-d demi">origin (optional)</div>
+                        <div class="col-d">Array.Number</div>
+                        <div class="col-d">origin adjustment</div>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li class="col1 miniSpacer">
+                        <div class="col-d demi">size (optional)</div>
+                        <div class="col-d">Array.Number</div>
+                        <div class="col-d">size to apply to descendants</div>
+                      </li>
+                    </ul>
+
+                  </li>
+                </ul>
+
+              </div>
+
+
+
+
+              <a class="method-tag" name="transformFrom"></a>
+              <div id="method-transformFrom" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> transformFrom (transform)</h3>
+                <p> Function, object, or static transform matrix which provides the transform. This is evaluated on every tick of the engine. </p>
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transform</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">transform provider object</div>
+
+                  </li>
+                </ul>
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 59 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="opacityFrom"></a>
+              <div id="method-opacityFrom" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> opacityFrom (opacity)</h3>
+                <p> Set function, object, or number to provide opacity, in range [0,1]. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">opacity</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">provider object</div>
+
+                  </li>
+                </ul>
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+                <small class="clear col1">Line: 78 famous/core/Modifier.js</small>
+
+              </div>
+
+
+              <a class="method-tag" name="originFrom"></a>
+              <div id="method-originFrom" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> originFrom (origin)</h3>
+                <p> Set function, object, or numerical array to provide origin, as [x,y], where x and y are in the range [0,1]. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">origin</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">provider object</div>
+
+                  </li>
+                </ul>
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+                <small class="clear col1">Line: 96 famous/core/Modifier.js</small>
+
+              </div>
+
+
+              <a class="method-tag" name="sizeFrom"></a>
+              <div id="method-sizeFrom" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> sizeFrom (size)</h3>
+                <p> Set function, object, or numerical array to provide size, as [width, height]. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">size</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">provider object</div>
+
+                  </li>
+                </ul>
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 116 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setTransform"></a>
+              <div id="method-setTransform" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setTransform (transform, transition, callback)</h3>
+                <p> Deprecated: Prefer transformFrom with static Transform, or use a TransitionableTransform. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transform</div>
+                    <div class="col-d">Transform</div>
+                    <div class="col-d">Transform to transition to</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transition</div>
+                    <div class="col-d">Transitionable</div>
+                    <div class="col-d">Valid transitionable object</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">callback</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">callback to call after transition completes</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 134 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setOpacity"></a>
+              <div id="method-setOpacity" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setOpacity (opacity, transition, callback)</h3>
+                <p> Deprecated: Prefer opacityFrom with static opacity array, or use a Transitionable with that opacity. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">opacity</div>
+                    <div class="col-d">Number</div>
+                    <div class="col-d">Opacity value to transition to.</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transition</div>
+                    <div class="col-d">Transitionable</div>
+                    <div class="col-d">Valid transitionable object</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">callback</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">callback to call after transition completes</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 157 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setOrigin"></a>
+              <div id="method-setOrigin" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setOrigin (origin, transition, callback)</h3>
+                <p> Deprecated: Prefer originFrom with static origin array, or use a Transitionable with that origin. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">origin</div>
+                    <div class="col-d">Array.Number</div>
+                    <div class="col-d">two element array with values between 0 and 1.</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transition</div>
+                    <div class="col-d">Transitionable</div>
+                    <div class="col-d">Valid transitionable object</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">callback</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">callback to call after transition completes</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 179 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setSize"></a>
+              <div id="method-setSize" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setSize (size, transition, callback)</h3>
+                <p> Deprecated: Prefer sizeFrom with static origin array, or use a Transitionable with that size. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">size</div>
+                    <div class="col-d">Array.Number</div>
+                    <div class="col-d">two element array of [width, height]</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">transition</div>
+                    <div class="col-d">Transitionable</div>
+                    <div class="col-d">Valid transitionable object</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">callback</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">callback to call after transition completes</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Modifier</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 204 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="halt"></a>
+              <div id="method-halt" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> halt </h3>
+                <p> Deprecated: Prefer to stop transform in your provider object. </p>
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 226 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getTransform"></a>
+              <div id="method-getTransform" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getTransform </h3>
+                <p> Deprecated: Prefer to use your provided transform or output of your transform provider. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> transform provider object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 242 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getFinalTransform"></a>
+              <div id="method-getFinalTransform" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getFinalTransform </h3>
+                <p> Deprecated: Prefer to determine the end state of your transform from your transform provider </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Transform</div>
+                    <div class="col-d2"> transform matrix</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 252 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getOpacity"></a>
+              <div id="method-getOpacity" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getOpacity </h3>
+                <p> Deprecated: Prefer to use your provided opacity or output of your opacity provider. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> opacity provider object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 262 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getOrigin"></a>
+              <div id="method-getOrigin" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getOrigin </h3>
+                <p> Deprecated: Prefer to use your provided origin or output of your origin provider. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> origin provider object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 271 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getSize"></a>
+              <div id="method-getSize" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getSize </h3>
+                <p> Deprecated: Prefer to use your provided size or output of your size provider. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> size provider object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 281 famous/core/Modifier.js</small>
+
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
 

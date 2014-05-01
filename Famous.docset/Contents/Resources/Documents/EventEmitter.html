@@ -5639,6 +5639,287 @@
 
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+              <div class="col1 spacer">
+
+                <h2>EventEmitter</h2>
+                <h6 class="miniSpacer">EventEmitter represents a channel for events.</h6>
+
+
+
+
+                <h6 class="medium-grey">Constructor</h6>
+
+
+
+
+              </div>
+
+
+
+
+              <a class="method-tag" name="emit"></a>
+              <div id="method-emit" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> emit (type, event)</h3>
+                <p> Trigger an event, sending to all downstream handlers listening for provided 'type' key. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'click')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">event</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">event data</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 22 famous/core/EventEmitter.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="" on""=""></a>
+              <div id="method-" on""="" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> "on" (type, handler)</h3>
+                <p> Bind a callback function to an event type handled by this object. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'click')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">Function(string, Object)</div>
+                    <div class="col-d">callback</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 42 famous/core/EventEmitter.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="addListener"></a>
+              <div id="method-addListener" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> addListener </h3>
+                <p> Alias for "on". </p>
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 58 famous/core/EventEmitter.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="removeListener"></a>
+              <div id="method-removeListener" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> removeListener (type, handler)</h3>
+                <p> Unbind an event by type and handler. This undoes the work of "on". </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'click')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">function object to remove</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventEmitter</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 64 famous/core/EventEmitter.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="bindThis"></a>
+              <div id="method-bindThis" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> bindThis (owner)</h3>
+                <p> Call event handlers with this set to owner. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">owner</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">object this EventEmitter belongs to</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 80 famous/core/EventEmitter.js</small>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
 
         </div>
       </div>

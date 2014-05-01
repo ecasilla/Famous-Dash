@@ -5640,6 +5640,583 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+              <div class="col1 spacer">
+
+                <h2>OptionsManager</h2>
+                <h6 class="miniSpacer">A collection of methods for setting options which can be extendedonto other classes. WARNING You can only pass through objects that will compile into valid JSON.Valid options: Strings, Arrays, Objects, Numbers, Nested Objects, Nested Arrays. This excludes: Document Fragments, Functions</h6>
+
+                <h6 class="medium-grey">Constructor</h6>
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">value</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">options dictionary</div>
+
+                  </li>
+                </ul>
+
+              </div>
+
+
+
+
+              <a class="method-tag" name="OptionsManager.patch"></a>
+              <div id="method-OptionsManager.patch" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> OptionsManager.patch (source, data)</h3>
+                <p> Create options manager from source dictionary with arguments overriden by patch dictionary. </p>
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">source</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">source arguments</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">data</div>
+                    <div class="col-d">...Object</div>
+                    <div class="col-d">argument additions and overwrites</div>
+
+                  </li>
+                </ul>
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> source object</div>
+                  </li>
+                </ul>
+
+
+                <small class="clear col1">Line: 41 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="patch"></a>
+              <div id="method-patch" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> patch (arguments)</h3>
+                <p> Create OptionsManager from source with arguments overriden by patches. Triggers 'change' event on this object's event handler if the state of the OptionsManager changes as a result. </p>
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">arguments</div>
+                    <div class="col-d">...Object</div>
+                    <div class="col-d">list of patch objects</div>
+
+                  </li>
+                </ul>
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">OptionsManager</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+                <small class="clear col1">Line: 63 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setOptions"></a>
+              <div id="method-setOptions" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setOptions </h3>
+                <p> Alias for patch </p>
+
+
+                <small class="clear col1">Line: 89 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="key"></a>
+              <div id="method-key" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> key (identifier)</h3>
+                <p> Return OptionsManager based on sub-object retrieved by key </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">identifier</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">key</div>
+
+                  </li>
+                </ul>
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">OptionsManager</div>
+                    <div class="col-d2"> new options manager with the value</div>
+                  </li>
+                </ul>
+
+
+                <small class="clear col1">Line: 97 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+              <a class="method-tag" name="get"></a>
+              <div id="method-get" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> get (key)</h3>
+                <p> Look up value by key </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">key</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">key</div>
+
+                  </li>
+                </ul>
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> associated object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 111 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="getOptions"></a>
+              <div id="method-getOptions" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> getOptions </h3>
+                <p> Alias for get </p>
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 122 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="set"></a>
+              <div id="method-set" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> set (key, value)</h3>
+                <p> Set key to value. Outputs 'change' event if a value is overwritten. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">key</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">key string</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">value</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">value object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">OptionsManager</div>
+                    <div class="col-d2"> new options manager based on the value object</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 128 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="value"></a>
+              <div id="method-value" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> value </h3>
+                <p> Return entire object contents of this OptionsManager. </p>
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">Object</div>
+                    <div class="col-d2"> current state of options</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 144 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="" on""=""></a>
+              <div id="method-" on""="" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> "on" (type, handler)</h3>
+                <p> Bind a callback function to an event type handled by this object. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'change')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">Function(string, Object)</div>
+                    <div class="col-d">callback</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 155 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="removeListener"></a>
+              <div id="method-removeListener" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> removeListener (type, handler)</h3>
+                <p> Unbind an event by type and handler. This undoes the work of "on". </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'change')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">Function</div>
+                    <div class="col-d">function object to remove</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> internal event handler object (for chaining)</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 169 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="pipe"></a>
+              <div id="method-pipe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> pipe (target)</h3>
+                <p> Add event handler object to set of downstream handlers. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">target</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">event handler target object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> passed event handler</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 184 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="unpipe"></a>
+              <div id="method-unpipe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> unpipe (target)</h3>
+                <p> Remove handler object from set of downstream handlers.Undoes work of "pipe" </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">target</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">target handler object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> provided target</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 197 famous/core/OptionsManager.js</small>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
 

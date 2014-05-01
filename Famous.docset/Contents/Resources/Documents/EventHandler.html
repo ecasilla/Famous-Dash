@@ -5640,6 +5640,524 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+              <div class="col1 spacer">
+
+                <h2>EventHandler</h2>
+                <h6 class="miniSpacer">EventHandler forwards received events to a set of provided callback functions.It allows events to be captured, processed, and optionally piped through to other event handlers.</h6>
+
+
+
+
+                <h6 class="medium-grey">Constructor</h6>
+
+
+
+
+              </div>
+
+
+
+
+              <a class="method-tag" name="setInputHandler"></a>
+              <div id="method-setInputHandler" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setInputHandler (object, handler)</h3>
+                <p> Assign an event handler to receive an object's input events. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">object</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">object to mix trigger, subscribe, and unsubscribe functions into</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">assigned event handler</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 33 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="setOutputHandler"></a>
+              <div id="method-setOutputHandler" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> setOutputHandler (object, handler)</h3>
+                <p> Assign an event handler to receive an object's output events. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">object</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">object to mix pipe, unpipe, on, addListener, and removeListener functions into</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">assigned event handler</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 50 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="emit"></a>
+              <div id="method-emit" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> emit (type, event)</h3>
+                <p> Trigger an event, sending to all downstream handlers listening for provided 'type' key. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'click')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">event</div>
+                    <div class="col-d">Object</div>
+                    <div class="col-d">event data</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 68 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="addListener"></a>
+              <div id="method-addListener" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> addListener </h3>
+                <p> Alias for emit </p>
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 90 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="pipe"></a>
+              <div id="method-pipe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> pipe (target)</h3>
+                <p> Add event handler object to set of downstream handlers. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">target</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">event handler target object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> passed event handler</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 96 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="unpipe"></a>
+              <div id="method-unpipe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> unpipe (target)</h3>
+                <p> Remove handler object from set of downstream handlers. Undoes work of "pipe". </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">target</div>
+                    <div class="col-d">EventHandler</div>
+                    <div class="col-d">target handler object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> provided target</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 117 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="" on""=""></a>
+              <div id="method-" on""="" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> "on" (type, handler)</h3>
+                <p> Bind a callback function to an event type handled by this object. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">type</div>
+                    <div class="col-d">String</div>
+                    <div class="col-d">event type key (for example, 'click')</div>
+
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">handler</div>
+                    <div class="col-d">Function(string, Object)</div>
+                    <div class="col-d">callback</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 140 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="addListener"></a>
+              <div id="method-addListener" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> addListener </h3>
+                <p> Alias for "on" </p>
+
+
+
+
+
+
+
+
+
+                <small class="clear col1">Line: 161 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="subscribe"></a>
+              <div id="method-subscribe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> subscribe (source)</h3>
+                <p> Listen for events from an upstream event handler. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">source</div>
+                    <div class="col-d">EventEmitter</div>
+                    <div class="col-d">source emitter object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 167 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+
+
+              <a class="method-tag" name="unsubscribe"></a>
+              <div id="method-unsubscribe" class="col1 method-block">
+
+                <h6 class="medium-grey">Method:</h6>
+                <h3 class="base-margin"> unsubscribe (source)</h3>
+                <p> Stop listening to events from an upstream event handler. </p>
+
+
+
+
+
+
+                <h5 class="miniSpacer">Parameters</h5>
+
+
+
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">source</div>
+                    <div class="col-d">EventEmitter</div>
+                    <div class="col-d">source emitter object</div>
+
+                  </li>
+                </ul>
+
+
+
+
+
+
+
+
+
+
+                <h5 class="col1 miniSpacer">Returns</h5>
+                <ul>
+                  <li class="col1 miniSpacer">
+                    <div class="col-d red">EventHandler</div>
+                    <div class="col-d2"> this</div>
+                  </li>
+                </ul>
+
+
+
+
+
+                <small class="clear col1">Line: 186 famous/core/EventHandler.js</small>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
         </div>
       </div>
 
