@@ -5640,6 +5640,1549 @@
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
 
+<div class="col1">
+            <div id="docs-container" class="cf docs col1 white-bg scrollable">
+                <div class="col1 pad-ls-g1 pad-t1">
+
+
+
+
+                        <div class="col1 spacer">
+
+                            <h2>Transform</h2>
+                            <h6 class="miniSpacer">A high-performance static matrix math library used to calculate affine transforms on surfaces and other renderables. Famo.us uses 4x4 matrices corresponding directly to WebKit matrices (column-major order). The internal "type" of a Matrix is a 16-long float array in row-major order, with: elements [0],[1],[2],[4],[5],[6],[8],[9],[10] forming the 3x3 transformation matrix; elements [12], [13], [14] corresponding to the t_x, t_y, t_z translation; elements [3], [7], [11] set to 0; element [15] set to 1. All methods are static.</h6>
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+                                <a class="method-tag" name="multiply4x4"></a>
+                                <div id="method-multiply4x4" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> multiply4x4 (a, b)</h3>
+                                        <p> Multiply two or more Transform matrix types to return a Transform matrix. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">a</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">left matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">b</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">right matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 39 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="multiply"></a>
+                                <div id="method-multiply" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> multiply (a, b)</h3>
+                                        <p> Fast-multiply two or more Transform matrix types to return a Matrix, assuming bottom row on each is [0 0 0 1]. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">a</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">left matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">b</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">right matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 69 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="thenMove"></a>
+                                <div id="method-thenMove" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> thenMove (m, t)</h3>
+                                        <p> Return a Transform translated by additional amounts in each dimension. This is equivalent to the result of Matrix.multiply(Matrix.translate(t[0], t[1], t[2]), m). </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">a matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">t</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">floats delta vector of length 2 or 3</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting translated matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 100 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="moveThen"></a>
+                                <div id="method-moveThen" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> moveThen (v, m)</h3>
+                                        <p> Return a Transform atrix which represents the result of a transform matrix applied after a move. This is faster than the equivalent multiply. This is equivalent to the result of: Transform.multiply(m, Transform.translate(t[0], t[1], t[2])). </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">v</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">vector representing initial movement</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix to apply afterwards</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 117 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="translate"></a>
+                                <div id="method-translate" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> translate (x, y, z)</h3>
+                                        <p> Return a Transform which represents a translation by specified amounts in each dimension. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">x</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">x translation</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">y</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">y translation</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">z</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">z translation</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 138 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="thenScale"></a>
+                                <div id="method-thenScale" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> thenScale (m, s)</h3>
+                                        <p> Return a Transform scaled by a vector in each dimension. This is a more performant equivalent to the result of Transform.multiply(Transform.scale(s[0], s[1], s[2]), m). </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">a matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">s</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">delta vector (array of floats &amp;&amp;
+   array.length == 3)</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting translated matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 154 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="scale"></a>
+                                <div id="method-scale" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> scale (x, y, z)</h3>
+                                        <p> Return a Transform which represents a scale by specified amounts in each dimension. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">x</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">x scale factor</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">y</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">y scale factor</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">z</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">z scale factor</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 176 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="rotateX"></a>
+                                <div id="method-rotateX" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> rotateX (theta)</h3>
+                                        <p> Return a Transform which represents a clockwise rotation around the x axis. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 192 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="rotateY"></a>
+                                <div id="method-rotateY" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> rotateY (theta)</h3>
+                                        <p> Return a Transform which represents a clockwise rotation around the y axis. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 207 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="rotateZ"></a>
+                                <div id="method-rotateZ" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> rotateZ (theta)</h3>
+                                        <p> Return a Transform which represents a clockwise rotation around the z axis. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 222 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="rotate"></a>
+                                <div id="method-rotate" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> rotate (phi, theta, psi)</h3>
+                                        <p> Return a Transform which represents composed clockwise rotations along each of the axes. Equivalent to the result of Matrix.multiply(rotateX(phi), rotateY(theta), rotateZ(psi)). </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">phi</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians to rotate about the positive x axis</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians to rotate about the positive y axis</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">psi</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians to rotate about the positive z axis</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 237 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="rotateAxis"></a>
+                                <div id="method-rotateAxis" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> rotateAxis (v, theta)</h3>
+                                        <p> Return a Transform which represents an axis-angle rotation </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">v</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">unit vector representing the axis to rotate about</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">radians to rotate clockwise about the axis</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 274 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="aboutOrigin"></a>
+                                <div id="method-aboutOrigin" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> aboutOrigin (v, m)</h3>
+                                        <p> Return a Transform which represents a transform matrix applied abouta separate origin point. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">v</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">origin point to apply matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix to apply</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 307 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="skew"></a>
+                                <div id="method-skew" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> skew (phi, theta, psi)</h3>
+                                        <p> Return a Transform representation of a skew transformation </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">phi</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">scale factor skew in the x axis</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">theta</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">scale factor skew in the y axis</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">psi</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">scale factor skew in the z axis</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 324 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="perspective"></a>
+                                <div id="method-perspective" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> perspective (focusZ)</h3>
+                                        <p> Returns a perspective Transform matrix </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">focusZ</div>
+            <div class="col-d">Number</div>
+            <div class="col-d">z position of focal point</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 338 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="getTranslate"></a>
+                                <div id="method-getTranslate" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> getTranslate (m)</h3>
+                                        <p> Return translation vector component of given Transform </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Array.Number</div>
+                                                <div class="col-d2"> the translation vector [t_x, t_y, t_z]</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 350 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="inverse"></a>
+                                <div id="method-inverse" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> inverse (m)</h3>
+                                        <p> Return inverse affine matrix for given Transform. Note: This assumes m[3] = m[7] = m[11] = 0, and m[15] = 1. Will provide incorrect results if not invertible or preconditions not met. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting inverted matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 362 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="transpose"></a>
+                                <div id="method-transpose" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> transpose (m)</h3>
+                                        <p> Returns the transpose of a 4x4 matrix </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">m</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> the resulting transposed matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 397 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="interpret"></a>
+                                <div id="method-interpret" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> interpret (M)</h3>
+                                        <p> Decompose Transform into separate .translate, .rotate, .scale, and .skew components. </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">M</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">tranform matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Object</div>
+                                                <div class="col-d2"> matrix spec object with component matrices .translate,
+   .rotate, .scale, .skew</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 419 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="average"></a>
+                                <div id="method-average" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> average (M1, M2, t)</h3>
+                                        <p> Weighted average between two matrices by averaging their translation, rotation, scale, skew components. f(M1,M2,t) = (1 - t)  M1 + t  M2 </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">M1</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">f(M1,M2,0) = M1</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">M2</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">f(M1,M2,1) = M2</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">t</div>
+            <div class="col-d">Number</div>
+            <div class="col-d"></div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> resulting matrix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 519 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="build"></a>
+                                <div id="method-build" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> build (spec)</h3>
+                                        <p> Compose .translate, .rotate, .scale, .skew components intoTransform matrix </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">spec</div>
+            <div class="col-d">MatrixSpec</div>
+            <div class="col-d">object with component matrices .translate,
+   .rotate, .scale, .skew</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Transform</div>
+                                                <div class="col-d2"> composed martix</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 552 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="equals"></a>
+                                <div id="method-equals" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> equals (a, b)</h3>
+                                        <p> Determine if two Transforms are component-wise equal Warning: breaks on perspective Transforms </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">a</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">b</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Boolean</div>
+                                                <div class="col-d2"> </div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 569 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="notEquals"></a>
+                                <div id="method-notEquals" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> notEquals (a, b)</h3>
+                                        <p> Determine if two Transforms are component-wise unequal Warning: breaks on perspective Transforms </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">a</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">b</div>
+            <div class="col-d">Transform</div>
+            <div class="col-d">matrix</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Boolean</div>
+                                                <div class="col-d2"> </div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 583 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="normalizeRotation"></a>
+                                <div id="method-normalizeRotation" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> normalizeRotation (rotation)</h3>
+                                        <p> Constrain angle-trio components to range of [-pi, pi). </p>
+
+
+
+
+
+
+    <h5 class="miniSpacer">Parameters</h5>
+
+
+
+    <ul>
+        <li class="col1 miniSpacer">
+        <div class="col-d red">rotation</div>
+            <div class="col-d">Array.Number</div>
+            <div class="col-d">phi, theta, psi (array of floats
+   &amp;&amp; array.length == 3)</div>
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+                                        <h5 class="col1 miniSpacer">Returns</h5>
+                                        <ul>
+                                            <li class="col1 miniSpacer">
+                                                <div class="col-d red">Array.Number</div>
+                                                <div class="col-d2"> new phi, theta, psi triplet
+   (array of floats &amp;&amp; array.length == 3)</div>
+                                            </li>
+                                        </ul>
+
+
+
+
+
+                                    <small class="clear col1">Line: 605 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="inFront"></a>
+                                <div id="method-inFront" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> inFront </h3>
+                                        <p> (Property) Array defining a translation forward in z by 1 </p>
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 639 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+
+
+                                <a class="method-tag" name="behind"></a>
+                                <div id="method-behind" class="col1 method-block">
+
+                                     <h6 class="medium-grey">Method:</h6>
+                                    <h3 class="base-margin"> behind </h3>
+                                        <p> (Property) Array defining a translation backwards in z by 1 </p>
+
+
+
+
+
+
+
+
+
+                                    <small class="clear col1">Line: 648 famous/core/Transform.js</small>
+
+                                </div>
+
+
+
+                    </div>
+                </div>
+        </div>
+
         </div>
       </div>
 
