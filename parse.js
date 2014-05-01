@@ -1,5 +1,40 @@
 (function(){
-  var fs, async, md, Sequelize, files, notFound, regexps, counter, result, e, lines, i$, len$, line, j$, len1$, regexp, page, prev, ref$, dir, file, md_data, html_data, final_data, api, link_1st, link_2nd, full_results, obj, objectify, seq, SearchIndex;
+  var fs, 
+  async, 
+  md, 
+  Sequelize, 
+  files, 
+  notFound, 
+  regexps, 
+  counter, 
+  result, 
+  e, 
+  lines, 
+  i$, 
+  len$, 
+  line, 
+  j$, 
+  len1$, 
+  regexp, 
+  page, 
+  prev, 
+  ref$, 
+  dir, 
+  file, 
+  md_data, 
+  html_data, 
+  final_data, 
+  api, 
+  link_1st, 
+  link_2nd, 
+  full_results, 
+  obj, 
+  objectify, 
+  seq, 
+  SearchIndex;
+
+
+
   fs = require('fs');
   async = require('async');
   md = require("marked");

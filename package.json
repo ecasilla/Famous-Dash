@@ -3,11 +3,22 @@
   "description": "Dash famous documentation generator",
   "author": "Ernie Casilla",
   "version": "0.0.1",
+  "keywords": ["famous", "dash", "generator"],
+   "bugs": {
+        "email": "ecasilla@icloud.com",
+        "url": "http://github.com/ecasilla/Famous-Dash/issues"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "http://github.com/ecasilla/Famous-Dash"
+    },
   "repository" :
    { "type" : "git"
     , "url" : "http://github.com/ecasilla/Famous-Dash.git"
   },
-
+  "maintainers": [
+        "Ernie Casilla <ecasilla@icloud.com> (http://github.com/ecasilla)",
+    ],
   "dependencies": {
     "async": "~0.2.6",
     "marked": "~0.2.8",
