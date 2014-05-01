@@ -8,7 +8,7 @@ I wanted to help the Famous community by allowing offline viewing of Document wi
 ### Usage
 #### When generating:
 
-1. Clone this repo: `git clone https://github.com/ecasilla/famous-dash`
+1. Clone this repo: `git clone https://github.com/ecasilla/Famous-Dash`
 2. Run using `node parse.js`
 
 
