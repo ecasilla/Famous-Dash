@@ -30,5 +30,10 @@
   });
   SearchIndex.sync().success(function(){
   });
-  
+
+// $('.method-tag').each(function(index){
+//    console.log(this.name )
+// });
+
+
 }).call(this);
