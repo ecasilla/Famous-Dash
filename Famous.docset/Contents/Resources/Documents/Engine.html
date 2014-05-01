@@ -5639,7 +5639,753 @@
 
         <div class="pad-l1-4">
          <!--  ###########CONTENT####### -->
+         <div class="col1">
+          <div id="docs-container" class="cf docs col1 white-bg scrollable">
+            <div class="col1 pad-ls-g1 pad-t1">
 
+
+
+
+              <div class="col1 spacer">
+
+                <h2>Engine</h2>
+                <h6 class="miniSpacer">The singleton object initiated upon process startup which manages all active Context instances, runs the render dispatch loop, and acts as a listener and dispatcher for events. All methods are therefore static. On static initialization, window.requestAnimationFrame is called with the event loop function. Note: Any window in which Engine runs will prevent default scrolling behavior on the 'touchmove' event.</h6>
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+              <a class="method-tag" name=""></a>
+              <div id="method-" class="col1 method-block">
+
+               <h6 class="medium-grey">Method:</h6>
+               <h3 class="base-margin">  </h3>
+               <p>  </p>
+
+
+
+
+
+
+
+
+
+               <small class="clear col1">Line: 52 famous/core/Engine.js</small>
+
+             </div>
+
+
+
+
+
+
+
+             <a class="method-tag" name="pipe"></a>
+             <div id="method-pipe" class="col1 method-block">
+
+               <h6 class="medium-grey">Method:</h6>
+               <h3 class="base-margin"> pipe (target)</h3>
+               <p> Add event handler object to set of downstream handlers. </p>
+
+
+
+
+
+
+               <h5 class="miniSpacer">Parameters</h5>
+
+
+
+               <ul>
+                <li class="col1 miniSpacer">
+                  <div class="col-d red">target</div>
+                  <div class="col-d">EventHandler</div>
+                  <div class="col-d">event handler target object</div>
+
+                </li>
+              </ul>
+
+
+
+
+
+
+
+
+
+
+              <h5 class="col1 miniSpacer">Returns</h5>
+              <ul>
+                <li class="col1 miniSpacer">
+                  <div class="col-d red">EventHandler</div>
+                  <div class="col-d2"> passed event handler</div>
+                </li>
+              </ul>
+
+
+
+
+
+              <small class="clear col1">Line: 132 famous/core/Engine.js</small>
+
+            </div>
+
+
+
+
+
+            <a class="method-tag" name="unpipe"></a>
+            <div id="method-unpipe" class="col1 method-block">
+
+             <h6 class="medium-grey">Method:</h6>
+             <h3 class="base-margin"> unpipe (target)</h3>
+             <p> Remove handler object from set of downstream handlers. Undoes work of "pipe". </p>
+
+
+
+
+
+
+             <h5 class="miniSpacer">Parameters</h5>
+
+
+
+             <ul>
+              <li class="col1 miniSpacer">
+                <div class="col-d red">target</div>
+                <div class="col-d">EventHandler</div>
+                <div class="col-d">target handler object</div>
+
+              </li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+            <h5 class="col1 miniSpacer">Returns</h5>
+            <ul>
+              <li class="col1 miniSpacer">
+                <div class="col-d red">EventHandler</div>
+                <div class="col-d2"> provided target</div>
+              </li>
+            </ul>
+
+
+
+
+
+            <small class="clear col1">Line: 145 famous/core/Engine.js</small>
+
+          </div>
+
+
+
+
+
+          <a class="method-tag" name="" on""=""></a>
+          <div id="method-" on""="" class="col1 method-block">
+
+           <h6 class="medium-grey">Method:</h6>
+           <h3 class="base-margin"> "on" (type, handler)</h3>
+           <p> Bind a callback function to an event type handled by this object. </p>
+
+
+
+
+
+
+           <h5 class="miniSpacer">Parameters</h5>
+
+
+
+           <ul>
+            <li class="col1 miniSpacer">
+              <div class="col-d red">type</div>
+              <div class="col-d">String</div>
+              <div class="col-d">event type key (for example, 'click')</div>
+
+            </li>
+          </ul>
+
+          <ul>
+            <li class="col1 miniSpacer">
+              <div class="col-d red">handler</div>
+              <div class="col-d">Function(string, Object)</div>
+              <div class="col-d">callback</div>
+
+            </li>
+          </ul>
+
+
+
+
+
+
+
+
+
+
+          <h5 class="col1 miniSpacer">Returns</h5>
+          <ul>
+            <li class="col1 miniSpacer">
+              <div class="col-d red">EventHandler</div>
+              <div class="col-d2"> this</div>
+            </li>
+          </ul>
+
+
+
+
+
+          <small class="clear col1">Line: 159 famous/core/Engine.js</small>
+
+        </div>
+
+
+
+
+
+        <a class="method-tag" name="emit"></a>
+        <div id="method-emit" class="col1 method-block">
+
+         <h6 class="medium-grey">Method:</h6>
+         <h3 class="base-margin"> emit (type, event)</h3>
+         <p> Trigger an event, sending to all downstream handlers listening for provided 'type' key. </p>
+
+
+
+
+
+
+         <h5 class="miniSpacer">Parameters</h5>
+
+
+
+         <ul>
+          <li class="col1 miniSpacer">
+            <div class="col-d red">type</div>
+            <div class="col-d">String</div>
+            <div class="col-d">event type key (for example, 'click')</div>
+
+          </li>
+        </ul>
+
+        <ul>
+          <li class="col1 miniSpacer">
+            <div class="col-d red">event</div>
+            <div class="col-d">Object</div>
+            <div class="col-d">event data</div>
+
+          </li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+        <h5 class="col1 miniSpacer">Returns</h5>
+        <ul>
+          <li class="col1 miniSpacer">
+            <div class="col-d red">EventHandler</div>
+            <div class="col-d2"> this</div>
+          </li>
+        </ul>
+
+
+
+
+
+        <small class="clear col1">Line: 177 famous/core/Engine.js</small>
+
+      </div>
+
+
+
+
+
+      <a class="method-tag" name="removeListener"></a>
+      <div id="method-removeListener" class="col1 method-block">
+
+       <h6 class="medium-grey">Method:</h6>
+       <h3 class="base-margin"> removeListener (type, handler)</h3>
+       <p> Unbind an event by type and handler. This undoes the work of "on". </p>
+
+
+
+
+
+
+       <h5 class="miniSpacer">Parameters</h5>
+
+
+
+       <ul>
+        <li class="col1 miniSpacer">
+          <div class="col-d red">type</div>
+          <div class="col-d">String</div>
+          <div class="col-d">event type key (for example, 'click')</div>
+
+        </li>
+      </ul>
+
+      <ul>
+        <li class="col1 miniSpacer">
+          <div class="col-d red">handler</div>
+          <div class="col-d">Function</div>
+          <div class="col-d">function object to remove</div>
+
+        </li>
+      </ul>
+
+
+
+
+
+
+
+
+
+
+      <h5 class="col1 miniSpacer">Returns</h5>
+      <ul>
+        <li class="col1 miniSpacer">
+          <div class="col-d red">EventHandler</div>
+          <div class="col-d2"> internal event handler object (for chaining)</div>
+        </li>
+      </ul>
+
+
+
+
+
+      <small class="clear col1">Line: 191 famous/core/Engine.js</small>
+
+    </div>
+
+
+
+
+
+    <a class="method-tag" name="getFPS"></a>
+    <div id="method-getFPS" class="col1 method-block">
+
+     <h6 class="medium-grey">Method:</h6>
+     <h3 class="base-margin"> getFPS </h3>
+     <p> Return the current calculated frames per second of the Engine. </p>
+
+
+
+
+
+
+
+
+
+     <h5 class="col1 miniSpacer">Returns</h5>
+     <ul>
+      <li class="col1 miniSpacer">
+        <div class="col-d red">Number</div>
+        <div class="col-d2"> calculated fps</div>
+      </li>
+    </ul>
+
+
+
+
+
+    <small class="clear col1">Line: 206 famous/core/Engine.js</small>
+
+  </div>
+
+
+
+
+
+  <a class="method-tag" name="setFPSCap"></a>
+  <div id="method-setFPSCap" class="col1 method-block">
+
+   <h6 class="medium-grey">Method:</h6>
+   <h3 class="base-margin"> setFPSCap (fps)</h3>
+   <p> Set the maximum fps at which the system should run. If internal render loop is called at a greater frequency than this FPSCap, Engine will throttle render and update until this rate is achieved. </p>
+
+
+
+
+
+
+   <h5 class="miniSpacer">Parameters</h5>
+
+
+
+   <ul>
+    <li class="col1 miniSpacer">
+      <div class="col-d red">fps</div>
+      <div class="col-d">Number</div>
+      <div class="col-d">maximum frames per second</div>
+
+    </li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <small class="clear col1">Line: 218 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="getOptions"></a>
+<div id="method-getOptions" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> getOptions (key)</h3>
+ <p> Return engine options. </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">key</div>
+    <div class="col-d">String</div>
+    <div class="col-d"></div>
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h5 class="col1 miniSpacer">Returns</h5>
+<ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">Object</div>
+    <div class="col-d2"> engine options</div>
+  </li>
+</ul>
+
+
+
+
+
+<small class="clear col1">Line: 232 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="setOptions"></a>
+<div id="method-setOptions" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> setOptions (options)</h3>
+ <p> Set engine options </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">options (optional)</div>
+    <div class="col-d">Object</div>
+    <div class="col-d">overrides of default options</div>
+
+
+
+    <ul>
+      <li class="col1 miniSpacer">
+        <div class="col-d demi">fpsCap (optional)</div>
+        <div class="col-d">Number</div>
+        <div class="col-d">maximum fps at which the system should run</div>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="col1 miniSpacer">
+        <div class="col-d demi">runLoop (optional)</div>
+        <div class="col-d">Boolean</div>
+        <div class="col-d">whether the run loop should continue</div>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="col1 miniSpacer">
+        <div class="col-d demi">containerType (optional)</div>
+        <div class="col-d">String</div>
+        <div class="col-d">type of container element.  Defaults to 'div'.</div>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="col1 miniSpacer">
+        <div class="col-d demi">containerClass (optional)</div>
+        <div class="col-d">String</div>
+        <div class="col-d">type of container element.  Defaults to 'famous-container'.</div>
+      </li>
+    </ul>
+
+
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<small class="clear col1">Line: 244 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="createContext"></a>
+<div id="method-createContext" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> createContext (el)</h3>
+ <p> Creates a new Context for rendering and event handling with provided document element as top of each tree. This will be tracked by the process-wide Engine. </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">el</div>
+    <div class="col-d">Node</div>
+    <div class="col-d">will be top of Famo.us document element tree</div>
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h5 class="col1 miniSpacer">Returns</h5>
+<ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">Context</div>
+    <div class="col-d2"> new Context within el</div>
+  </li>
+</ul>
+
+
+
+
+
+<small class="clear col1">Line: 260 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="registerContext"></a>
+<div id="method-registerContext" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> registerContext (context)</h3>
+ <p> Registers an existing context to be updated within the run loop. </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">context</div>
+    <div class="col-d">Context</div>
+    <div class="col-d">Context to register</div>
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h5 class="col1 miniSpacer">Returns</h5>
+<ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">FamousContext</div>
+    <div class="col-d2"> provided context</div>
+  </li>
+</ul>
+
+
+
+
+
+<small class="clear col1">Line: 286 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="nextTick"></a>
+<div id="method-nextTick" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> nextTick (fn)</h3>
+ <p> Queue a function to be executed on the next tick of the Engine. </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">fn</div>
+    <div class="col-d">Function(Object)</div>
+    <div class="col-d">function accepting window object</div>
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<small class="clear col1">Line: 300 famous/core/Engine.js</small>
+
+</div>
+
+
+
+
+
+<a class="method-tag" name="defer"></a>
+<div id="method-defer" class="col1 method-block">
+
+ <h6 class="medium-grey">Method:</h6>
+ <h3 class="base-margin"> defer (fn)</h3>
+ <p> Queue a function to be executed sometime soon, at a time that is unlikely to affect frame rate. </p>
+
+
+
+
+
+
+ <h5 class="miniSpacer">Parameters</h5>
+
+
+
+ <ul>
+  <li class="col1 miniSpacer">
+    <div class="col-d red">fn</div>
+    <div class="col-d">Function</div>
+    <div class="col-d"></div>
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<small class="clear col1">Line: 313 famous/core/Engine.js</small>
+
+</div>
+
+
+
+</div>
+</div>
+</div>
         </div>
       </div>
 
