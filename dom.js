@@ -20,35 +20,32 @@ readDirFiles.list('Famous.docset/Contents/Resources/Documents',function (err,fil
 
 
 function fileReader(file) {
-    console.log('starting to check');
     var fileNamesArray = (_.values(file))
-    //console.log(fileNamesArray)
-
     _.each(fileNamesArray,function(index) {
-      console.log(index)
     if (index === ' ' || index ==='/') {
-
+      //console.log(index)
       }else {
         fs.readFile(index, 'utf-8',function (err,data) {
           if (err) {
-            console.log(err)
+            console.log(err + 'fileReader')
           }
-           htmlparse(data)
+           htmlparse(data,fileNamesArray)
         });
       }
      });
 }
 
 
-function htmlparse (file) {
- handler = new htmlparser.DefaultHandler( function (err,dom) {
+function htmlparse (file, fileNamesArray) {
+//console.log(fileNamesArray)
+ handler = new htmlparser.DefaultHandler( function (err, dom) {
    if (err) {
-     console.log(err)
+     console.log(err + 'htmlparser')
    }else{
    var methods = select(dom, 'a.method-tag');
-   console.log(methods)
-   _.each(methods, function (method) {
-       console.log("Method name is" + " " + method.attribs.name)
+   _.each(methods, function (method,index) {
+       //console.log("Method name is" + " " + method.attribs.name)
+       //console.log(method.attribs.on)
      });
    }
  });
