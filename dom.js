@@ -1,5 +1,12 @@
 var readDirFiles = require('read-dir-files'),
-    _ = require('underscore');
+     select = require('soupselect').select,
+     fs = require('fs'),
+    _ = require('underscore'),
+    htmlparser = require("htmlparser"),
+    handler,
+    methods,
+    parser,
+    parsedFiles,
     files = [];
 
 readDirFiles.list('Famous.docset/Contents/Resources/Documents',function (err,filenames) {
@@ -15,10 +22,46 @@ readDirFiles.list('Famous.docset/Contents/Resources/Documents',function (err,fil
     if (filenames.substr(-1,1) ==='s' || filenames.substr(-1,1)==='/') {
         filenames = "" 
       }
-
-        console.log(filenames)
+      console.log(typeof filenames)
+    //   fileReader(filenames);
+      parsedFiles = []
+      parsedFiles = parsedFiles.push(filenames)
     }
+      console.log(typeof parsedFiles)
  });
+
+
+function fileReader(file) {
+  console.log(file)
+  if (file === '') {
+    return
+    }
+  fs.readFile(file, 'utf-8',function (err,data) {
+    if (err) {
+      console.log(err)
+    }
+     console.log(data)
+  });
+}
+
+
+// function htmlparse (file) {
+//  console.log(file)
+//  handler = new htmlparser.DefaultHandler( function (err,dom) {
+//    if (err) {
+//      console.log(err)
+//    }else{
+//    methods = select(dom, 'a.method-tag');
+//    console.log(methods)
+//    methods_.each(function (method) {
+//        sys.puts("Method name is" + " " + method.attribs.name)
+//      });
+//    }
+//  });
+//  
+//parser = new htmlparser.Parser(handler);
+//parser.parseComplete(file);
+// };
 
 
 
