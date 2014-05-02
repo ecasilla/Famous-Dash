@@ -21,6 +21,7 @@ readDirFiles.list('Famous.docset/Contents/Resources/Documents',function (err,fil
 
 function fileReader(file) {
     var fileNamesArray = (_.values(file))
+      pathStorage(fileNamesArray)
     _.each(fileNamesArray,function(index) {
     if (index === ' ' || index ==='/') {
       //console.log(index)
@@ -37,26 +38,25 @@ function fileReader(file) {
 
 
 function htmlparse (file, fileNamesArray) {
-//console.log(fileNamesArray)
  handler = new htmlparser.DefaultHandler( function (err, dom) {
    if (err) {
      console.log(err + 'htmlparser')
    }else{
    var methods = select(dom, 'a.method-tag');
-   _.each(methods, function (method,index) {
-       //console.log("Method name is" + " " + method.attribs.name)
-       //console.log(method.attribs.on)
+   _.each(methods, function (method) {
+      console.log(method.attribs.name)
      });
    }
  });
-
 parser = new htmlparser.Parser(handler);
 parser.parseComplete(file);
 };
 
 
 
-
+function pathStorage (arrOfFiles) {
+  console.log(arrOfFiles)
+}
 
 
 
